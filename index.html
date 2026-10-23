@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bipul Regmi | Electrical Engineering Co-op Student</title>
+<meta name="description" content="Bipul Regmi, electrical engineering co-op student at the University of Alberta. Embedded systems, PCB design, signal processing and sensor diagnostics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5F4; --ink:#10233A; --muted:#4F6272; --line:#C9D4D6;
+  --trace:#0A7F70; --noise:#B5651D; --grid:rgba(16,35,58,.07); --scope:#0E1B2A; --scope-grid:rgba(255,255,255,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#0F1A26;--ink:#E6EEF0;--muted:#9FB2BF;--line:#26394A;--trace:#3DD6BF;--noise:#E3944A;--grid:rgba(255,255,255,.04);--scope:#08111B;}
+}
+:root[data-theme="dark"]{--paper:#0F1A26;--ink:#E6EEF0;--muted:#9FB2BF;--line:#26394A;--trace:#3DD6BF;--noise:#E3944A;--grid:rgba(255,255,255,.04);--scope:#08111B;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+a{color:var(--trace);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--trace);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav a{margin-right:20px;color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--trace)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.hero{padding:48px 0 32px}
+h1{font-size:clamp(2.6rem,8vw,4.8rem);font-stretch:112%;font-weight:800;line-height:1;letter-spacing:-.02em;margin:0 0 16px}
+.lede{font-size:1.2rem;max-width:34em;color:var(--muted);margin:0 0 28px}
+.scope{background:var(--scope);border-radius:10px;padding:14px;border:1px solid var(--line)}
+.scope canvas{width:100%;height:190px;display:block;border-radius:4px;
+  background-image:linear-gradient(var(--scope-grid) 1px,transparent 1px),linear-gradient(90deg,var(--scope-grid) 1px,transparent 1px);background-size:38px 38px}
+.scope-bar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-top:12px;color:#B7C6D0;font-size:14px}
+.scope-bar button{background:#E6EEF0;color:#10233A;border:0;border-radius:6px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+.key i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin:0 6px 0 12px}
+section{padding:48px 0 8px}
+h2{font-size:1.9rem;font-stretch:108%;font-weight:700;margin:0 0 24px;letter-spacing:-.01em}
+.job{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding:0 0 32px;margin-left:6px;border-left:2px solid var(--line);padding-left:24px;position:relative}
+.job::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--trace)}
+.job .when{color:var(--muted);font-size:15px;padding-top:2px}
+.job h3{margin:0;font-size:1.15rem}
+.job .org{color:var(--muted);margin:0 0 8px}
+.job ul{margin:0;padding-left:1.1em}
+.job li{margin-bottom:8px}
+.proj{border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 88%,transparent);border-radius:8px;padding:22px 24px;margin-bottom:18px}
+.proj h3{margin:0 0 2px;font-size:1.2rem}
+.proj .meta{color:var(--muted);font-size:15px;margin:0 0 10px}
+.proj ul{margin:0 0 10px;padding-left:1.1em}
+.tags span{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:1px 8px;margin:0 6px 6px 0;font-size:13px;color:var(--muted)}
+.proj .links a{margin-right:16px;font-weight:600}
+.next{border:1px dashed var(--line);border-radius:8px;padding:18px 24px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px 32px}
+.skills h3{font-size:1rem;margin:0 0 4px}
+.skills p{margin:0;color:var(--muted);font-size:15.5px}
+.contact p{margin:0 0 6px}
+footer{margin-top:56px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:640px){.job{grid-template-columns:1fr}body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav aria-label="Primary"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+    <button id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+  </header>
+
+  <main>
+  <div class="hero">
+    <h1>Bipul Regmi</h1>
+    <p class="lede">Electrical engineering co-op student at the University of Alberta. I design boards, write firmware and track down the faults that make sensors misbehave. I’m most interested in signals, FPGAs and high-frequency electronics, and I’m also open to electric vehicle work.</p>
+    <div class="scope">
+      <canvas id="scope" aria-label="Oscilloscope animation of a 1 kHz signal with 15 kHz noise, with a low-pass filter you can switch on"></canvas>
+      <div class="scope-bar">
+        <span class="key"><i style="background:#3DD6BF"></i>Output<i style="background:#E3944A"></i>15 kHz switching noise (input)</span>
+        <button id="lpf" type="button" aria-pressed="false">Low-pass filter: off</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <article class="job">
+      <div class="when">May 2026 – Aug 2026</div>
+      <div>
+        <h3>Engineering Intern, Field Hardware &amp; Diagnostics</h3>
+        <p class="org">Tetra Tech, Edmonton</p>
+        <ul>
+          <li>Diagnosed instrument signal losses, including LCMS trigger skipping and camera sensor crashes, by tracing signal lines and isolating hardware faults in remote mobile environments.</li>
+          <li>Analyzed hardware fault modes across computing units and wrote Python signal integrity diagnostic tools to resolve digital interface failures during high vibration data acquisition.</li>
+          <li>Operated and monitored sensor payloads (LiDAR, LCMS, Ladybug camera arrays, GNSS/IMU) across 550+ km, using real-time telemetry to keep data intact over 14-hour shifts.</li>
+          <li>Ran live hardware demonstrations for clients covering system operation, trigger synchronization and data acquisition methods.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="job">
+      <div class="when">May 2025 – Dec 2025</div>
+      <div>
+        <h3>Engineering Intern, Data Pipelines &amp; Signal Processing</h3>
+        <p class="org">Tetra Tech, Edmonton</p>
+        <ul>
+          <li>Traced missing camera frames to mechanical impulses on encoders, then wrote a Python script that resynchronized encoder triggers with GPS timestamps and salvaged 5,000+ frames.</li>
+          <li>Built MATLAB and Python scripts to sweep multi-terabyte datasets for corrupt 0-byte files and sensor dropouts, reindexing spatial logs and reprocessing image contrast automatically.</li>
+          <li>Developed a Python asset parsing algorithm that evaluates overlapping multi-vehicle survey runs and merges dense LiDAR point clouds with the best panoramic imagery into unified client datasets.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="project-list"></div>
+    <div class="next">More projects will be added here as I finish them.</div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Design &amp; simulation</h3><p>Altium Designer, KiCad, LTSpice, AutoCAD, Xilinx Vivado, Verilog, VHDL</p></div>
+      <div><h3>Validation &amp; test</h3><p>Oscilloscope, spectrum analyzer, multimeter, LiDAR/GNSS/IMU</p></div>
+      <div><h3>Embedded systems &amp; protocols</h3><p>C/C++, Python, Teensy, STM32, Arduino, CANbus, I2C, SPI, UART</p></div>
+      <div><h3>Automation &amp; data analysis</h3><p>MATLAB/Simulink, Python (Pandas, NumPy), signal processing</p></div>
+      <div><h3>Licenses</h3><p>Amateur radio license, Class 5 driver’s license (clean abstract), WHMIS</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bipul@ualberta.ca">bipul@ualberta.ca</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/Bipul-Regmi">linkedin.com/in/Bipul-Regmi</a></p>
+    <p>Edmonton, Alberta. Bachelor of Science in Electrical Engineering (Co-op), expected May 2028.</p>
+  </section>
+  </main>
+  <footer>© <span id="yr"></span> Bipul Regmi</footer>
+</div>
+
+<script>
+/* ===== ADD PROJECTS HERE =====
+   Copy one block, paste it at the end of the list, and edit the text.
+   Leave github/demo as "" to hide that link. */
+const PROJECTS = [
+  {
+    title: "Alberta Robotics Vehicle Project",
+    meta: "Altium, LTSpice · January 2026 – present",
+    points: [
+      "Designed a 4-layer mixed-signal control board around a Teensy 4.0, using ground plane isolation and careful placement to limit EMI on sensitive analog traces.",
+      "Built a low-pass filter with LMV321 op-amps to separate 1 kHz telemetry from 15 kHz switching noise, and validated it with LTSpice Monte Carlo runs across component tolerances.",
+      "Designed a multi-node sensor network over CANbus and I2C linking an Nvidia Orin to TCN75A thermal sensors, with open-drain fault detection for automatic throttling and protection."
+    ],
+    tags: ["Altium", "LTSpice", "Teensy 4.0", "CANbus", "I2C"],
+    github: "", demo: ""
+  },
+  {
+    title: "Ball and Beam Control System",
+    meta: "MATLAB, Simulink · February 2026 – March 2026",
+    points: [
+      "Built a dual-loop PID controller (inner loop for motor position, outer loop for ball stabilization) with a settling time under 2.5 seconds and minimal steady-state error.",
+      "Derived and linearized the non-linear plant, then used Root Locus and Bode analysis to guarantee a 60° phase margin.",
+      "Deployed the controller to an MF 634 I/O board with Simulink Desktop Real-Time, handling hardware interrupts to track a 0.5 Hz reference trajectory."
+    ],
+    tags: ["MATLAB", "Simulink", "PID", "Bode", "Root Locus"],
+    github: "", demo: ""
+  }
+];
+
+const list = document.getElementById("project-list");
+PROJECTS.forEach(p => {
+  const el = document.createElement("article");
+  el.className = "proj";
+  const links = [p.github && `<a href="${p.github}">Source code</a>`, p.demo && `<a href="${p.demo}">Live demo</a>`].filter(Boolean).join("");
+  el.innerHTML = `<h3>${p.title}</h3><p class="meta">${p.meta}</p><ul>${p.points.map(x=>`<li>${x}</li>`).join("")}</ul>` +
+    `<div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div>` + (links ? `<div class="links">${links}</div>` : "");
+  list.appendChild(el);
+});
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* theme toggle */
+const root = document.documentElement;
+document.getElementById("theme").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+});
+
+/* oscilloscope */
+const cv = document.getElementById("scope"), ctx = cv.getContext("2d");
+const btn = document.getElementById("lpf");
+let filtered = false, t = 0;
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+btn.addEventListener("click", () => {
+  filtered = !filtered;
+  btn.textContent = "Low-pass filter: " + (filtered ? "on" : "off");
+  btn.setAttribute("aria-pressed", filtered);
+  if (still) draw();
+});
+function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;cv.width=r.width*d;cv.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);}
+function draw(){
+  const w=cv.clientWidth,h=cv.clientHeight,mid=h/2;
+  ctx.clearRect(0,0,w,h);
+  const f1=2*Math.PI*3/w*2, f2=2*Math.PI*45/w*2; /* 1 kHz : 15 kHz = 1 : 15 */
+  const amp = filtered ? 0.03 : 0.35;
+  ctx.lineWidth=2;
+  ctx.strokeStyle="#E3944A"; ctx.globalAlpha=.55; ctx.beginPath();
+  for(let x=0;x<=w;x++){const y=mid-h*(0.28*Math.sin(f1*x-t)+0.35*Math.sin(f2*x-t*15));x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+  ctx.stroke();
+  ctx.globalAlpha=1; ctx.strokeStyle="#3DD6BF"; ctx.lineWidth=2.5; ctx.beginPath();
+  for(let x=0;x<=w;x++){const y=mid-h*(0.28*Math.sin(f1*x-t)+amp*Math.sin(f2*x-t*15));x?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+  ctx.stroke();
+}
+function loop(){t+=0.03;draw();requestAnimationFrame(loop);}
+size();addEventListener("resize",()=>{size();draw();});
+still ? draw() : loop();
+</script>
+</body>
+</html>
